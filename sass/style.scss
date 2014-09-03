@@ -11,7 +11,7 @@ body {
 	font-size: 100%;
 }
 
-// Header
+// ========== Header ========== //
 
 h1 {
 	font-family: 'Droid Serif', serif;
@@ -51,3 +51,247 @@ p {
 	font-size: .75em;
 	padding-left:15px;  
 }
+
+
+// ========== Carousel styling ========== //
+
+.carousel {
+	position: relative;
+}
+
+.shots-container {
+	width: 100%;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+	padding: 1em 0;
+}
+
+
+.shots {
+	overflow: hidden;
+	margin: 0;
+	padding: 0 2%;
+	/*
+	 * Shot width = 400px + 20px margin + 20px padding + 2px border
+	 * 442 * 10 (# of shots)
+	 */
+	width: 4420px;
+	min-height: 300px;
+
+	@media screen and (max-width: 450px) {
+		/*
+		 * Shot width = 300px + 20px margin + 20px padding + 2px border
+		 * 342 * 10 (# of shots)
+		 */
+		width: 3420px; /* 340 * 10 */
+		min-height: 250px;
+	}
+
+	li {
+		float: left;
+		width: 400px;
+		height: 300px;
+		margin: 0 10px;
+		padding: 10px;
+		background: #fff url(images/loading.gif) 100px 50% no-repeat;
+		border: 1px solid #ddd;
+		@include border-radius(3px);
+
+		@media screen and (max-width: 450px) {
+				width: 300px;
+				height: 225px;
+		}
+	}
+}
+
+.mask {
+	position: absolute;
+	top:0;
+	width: 4%;
+	height: 100%;
+}
+.mask-left {
+	left: 0;
+	@include background( linear-gradient(left, rgba(29,29,29,1), rgba(29,29,29,0)) );
+}
+.mask-right {
+	right: 0;
+	@include background( linear-gradient(left, rgba(29,29,29,0), rgba(29,29,29,1)) );
+}
+
+
+// ========== Footer ========== //
+
+.footer {
+	p {
+		color: #777;
+		padding: 0 1em;
+	}
+}
+
+
+// ========== Overrider ========== //
+ 
+.content,
+.footer {
+	padding: 4em 0 6em;
+}
+ 
+.content {
+	border-top: 1px solid #010101;
+	border-bottom: 1px solid #010101;
+
+	h1 {
+		color: #ea4c89; // dribbble brand color
+	}
+
+	> p {
+		font-size: .85em;
+		color: #aaa;
+	}
+}
+
+// font styling
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Shared styles
+.icon-location:before,
+.icon-bubble:before,
+.icon-spinner:before,
+.icon-attachment:before,
+.icon-arrow-up:before,
+.icon-arrow-right:before,
+.icon-arrow-down:before,
+.icon-arrow-left:before,
+.icon-googleplus:before,
+.icon-facebook:before,
+.icon-github:before,
+.icon-tumblr:before,
+.icon-linkedin:before,
+.icon-stackoverflow:before,
+.icon-file-pdf:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+// Individual characters
+
+.icon-location:before {
+	content: "\e600";
+}
+.icon-bubble:before {
+	content: "\e601";
+}
+.icon-spinner:before {
+	content: "\e602";
+}
+.icon-attachment:before {
+	content: "\e603";
+}
+.icon-arrow-up:before {
+	content: "\e604";
+}
+.icon-arrow-right:before {
+	content: "\e605";
+}
+.icon-arrow-down:before {
+	content: "\e606";
+}
+.icon-arrow-left:before {
+	content: "\e607";
+}
+.icon-googleplus:before {
+	content: "\e608";
+}
+.icon-facebook:before {
+	content: "\e609";
+}
+.icon-github:before {
+	content: "\e60a";
+}
+.icon-tumblr:before {
+	content: "\e60b";
+}
+.icon-linkedin:before {
+	content: "\e60c";
+}
+.icon-stackoverflow:before {
+	content: "\e60d";
+}
+.icon-file-pdf:before {
+	content: "\e60e";
+}
+
+
+.social {
+	margin:2em 0;
+	font-family: Helvetica, Arial, sans-serif;
+
+	li {
+		position: relative;
+		@include inline-block();
+		margin: .5em;
+		@include transition(all .15s ease);
+
+		&:hover {
+			@include scale(1.25);
+			color: white;
+		}
+
+		&:before {
+			position: absolute;
+			width: 2em; /* center align technique, give width, negative half margin */
+			margin-left: -1em;
+			top: 1.5em;
+			left: 50%;
+		}
+
+		a {
+			display: block;
+			color: inherit;
+			padding: 2.5em 1em 1em;
+			width: 6em;
+			// allow truncation if needed
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+/* Tumblr */
+.icon-tumblr {color: #304d6b}
+.icon-tumblr:hover {background:#304d6b}
+/* Instagram */
+.icon-instagram {color: #634d40}
+.icon-instagram:hover {background: #634d40}
+/* Facebook */
+.icon-facebook {color: #3b5998}
+.icon-facebook:hover {background: #3b5998}
+/* Google-Plus */
+.icon-googleplus {color: #da4937}
+.icon-googleplus:hover {background: #da4937}
+/* Github */
+.icon-github {color: #f5f5f5}
+.icon-github:hover {background: #333333}
+/* Stackoverflow */
+.icon-stackoverflow {color: #ff771b}
+.icon-stackoverflow:hover {background: #ff771b}
+/* LinkedIn */ 
+.icon-linkedin {color: #1b86bc}
+.icon-linkedin:hover {background: #1b86bc}

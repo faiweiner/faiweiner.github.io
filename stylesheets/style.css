@@ -122,3 +122,348 @@ p {
   font-size: .75em;
   padding-left: 15px;
 }
+
+/* line 58, ../sass/style.scss */
+.carousel {
+  position: relative;
+}
+
+/* line 62, ../sass/style.scss */
+.shots-container {
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding: 1em 0;
+}
+
+/* line 71, ../sass/style.scss */
+.shots {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 2%;
+  /*
+   * Shot width = 400px + 20px margin + 20px padding + 2px border
+   * 442 * 10 (# of shots)
+   */
+  width: 4420px;
+  min-height: 300px;
+}
+@media screen and (max-width: 450px) {
+  /* line 71, ../sass/style.scss */
+  .shots {
+    /*
+     * Shot width = 300px + 20px margin + 20px padding + 2px border
+     * 342 * 10 (# of shots)
+     */
+    width: 3420px;
+    /* 340 * 10 */
+    min-height: 250px;
+  }
+}
+/* line 91, ../sass/style.scss */
+.shots li {
+  float: left;
+  width: 400px;
+  height: 300px;
+  margin: 0 10px;
+  padding: 10px;
+  background: white url(images/loading.gif) 100px 50% no-repeat;
+  border: 1px solid #ddd;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 450px) {
+  /* line 91, ../sass/style.scss */
+  .shots li {
+    width: 300px;
+    height: 225px;
+  }
+}
+
+/* line 108, ../sass/style.scss */
+.mask {
+  position: absolute;
+  top: 0;
+  width: 4%;
+  height: 100%;
+}
+
+/* line 114, ../sass/style.scss */
+.mask-left {
+  left: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFkMWQxZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFkMWQxZCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1d1d1d), color-stop(100%, rgba(29, 29, 29, 0)));
+  background: -moz-linear-gradient(left, #1d1d1d, rgba(29, 29, 29, 0));
+  background: -webkit-linear-gradient(left, #1d1d1d, rgba(29, 29, 29, 0));
+  background: linear-gradient(to right, #1d1d1d, rgba(29, 29, 29, 0));
+}
+
+/* line 118, ../sass/style.scss */
+.mask-right {
+  right: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFkMWQxZCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDFkMWQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(29, 29, 29, 0)), color-stop(100%, #1d1d1d));
+  background: -moz-linear-gradient(left, rgba(29, 29, 29, 0), #1d1d1d);
+  background: -webkit-linear-gradient(left, rgba(29, 29, 29, 0), #1d1d1d);
+  background: linear-gradient(to right, rgba(29, 29, 29, 0), #1d1d1d);
+}
+
+/* line 127, ../sass/style.scss */
+.footer p {
+  color: #777;
+  padding: 0 1em;
+}
+
+/* line 136, ../sass/style.scss */
+.content,
+.footer {
+  padding: 4em 0 6em;
+}
+
+/* line 141, ../sass/style.scss */
+.content {
+  border-top: 1px solid #010101;
+  border-bottom: 1px solid #010101;
+}
+/* line 145, ../sass/style.scss */
+.content h1 {
+  color: #ea4c89;
+}
+/* line 149, ../sass/style.scss */
+.content > p {
+  font-size: .85em;
+  color: #aaa;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 169, ../sass/style.scss */
+.icon-location:before,
+.icon-bubble:before,
+.icon-spinner:before,
+.icon-attachment:before,
+.icon-arrow-up:before,
+.icon-arrow-right:before,
+.icon-arrow-down:before,
+.icon-arrow-left:before,
+.icon-googleplus:before,
+.icon-facebook:before,
+.icon-github:before,
+.icon-tumblr:before,
+.icon-linkedin:before,
+.icon-stackoverflow:before,
+.icon-file-pdf:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 194, ../sass/style.scss */
+.icon-location:before {
+  content: "\e600";
+}
+
+/* line 197, ../sass/style.scss */
+.icon-bubble:before {
+  content: "\e601";
+}
+
+/* line 200, ../sass/style.scss */
+.icon-spinner:before {
+  content: "\e602";
+}
+
+/* line 203, ../sass/style.scss */
+.icon-attachment:before {
+  content: "\e603";
+}
+
+/* line 206, ../sass/style.scss */
+.icon-arrow-up:before {
+  content: "\e604";
+}
+
+/* line 209, ../sass/style.scss */
+.icon-arrow-right:before {
+  content: "\e605";
+}
+
+/* line 212, ../sass/style.scss */
+.icon-arrow-down:before {
+  content: "\e606";
+}
+
+/* line 215, ../sass/style.scss */
+.icon-arrow-left:before {
+  content: "\e607";
+}
+
+/* line 218, ../sass/style.scss */
+.icon-googleplus:before {
+  content: "\e608";
+}
+
+/* line 221, ../sass/style.scss */
+.icon-facebook:before {
+  content: "\e609";
+}
+
+/* line 224, ../sass/style.scss */
+.icon-github:before {
+  content: "\e60a";
+}
+
+/* line 227, ../sass/style.scss */
+.icon-tumblr:before {
+  content: "\e60b";
+}
+
+/* line 230, ../sass/style.scss */
+.icon-linkedin:before {
+  content: "\e60c";
+}
+
+/* line 233, ../sass/style.scss */
+.icon-stackoverflow:before {
+  content: "\e60d";
+}
+
+/* line 236, ../sass/style.scss */
+.icon-file-pdf:before {
+  content: "\e60e";
+}
+
+/* line 241, ../sass/style.scss */
+.social {
+  margin: 2em 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* line 245, ../sass/style.scss */
+.social li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: .5em;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+/* line 251, ../sass/style.scss */
+.social li:hover {
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+  color: white;
+}
+/* line 256, ../sass/style.scss */
+.social li:before {
+  position: absolute;
+  width: 2em;
+  /* center align technique, give width, negative half margin */
+  margin-left: -1em;
+  top: 1.5em;
+  left: 50%;
+}
+/* line 264, ../sass/style.scss */
+.social li a {
+  display: block;
+  color: inherit;
+  padding: 2.5em 1em 1em;
+  width: 6em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Tumblr */
+/* line 278, ../sass/style.scss */
+.icon-tumblr {
+  color: #304d6b;
+}
+
+/* line 279, ../sass/style.scss */
+.icon-tumblr:hover {
+  background: #304d6b;
+}
+
+/* Instagram */
+/* line 281, ../sass/style.scss */
+.icon-instagram {
+  color: #634d40;
+}
+
+/* line 282, ../sass/style.scss */
+.icon-instagram:hover {
+  background: #634d40;
+}
+
+/* Facebook */
+/* line 284, ../sass/style.scss */
+.icon-facebook {
+  color: #3b5998;
+}
+
+/* line 285, ../sass/style.scss */
+.icon-facebook:hover {
+  background: #3b5998;
+}
+
+/* Google-Plus */
+/* line 287, ../sass/style.scss */
+.icon-googleplus {
+  color: #da4937;
+}
+
+/* line 288, ../sass/style.scss */
+.icon-googleplus:hover {
+  background: #da4937;
+}
+
+/* Github */
+/* line 290, ../sass/style.scss */
+.icon-github {
+  color: #f5f5f5;
+}
+
+/* line 291, ../sass/style.scss */
+.icon-github:hover {
+  background: #333333;
+}
+
+/* Stackoverflow */
+/* line 293, ../sass/style.scss */
+.icon-stackoverflow {
+  color: #ff771b;
+}
+
+/* line 294, ../sass/style.scss */
+.icon-stackoverflow:hover {
+  background: #ff771b;
+}
+
+/* LinkedIn */
+/* line 296, ../sass/style.scss */
+.icon-linkedin {
+  color: #1b86bc;
+}
+
+/* line 297, ../sass/style.scss */
+.icon-linkedin:hover {
+  background: #1b86bc;
+}
