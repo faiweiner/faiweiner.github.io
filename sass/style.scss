@@ -22,7 +22,6 @@ h1 {
 
 .header {
 	padding: 10em 0 14em;
-
 	h1 {
 		color: grey;
 	}
@@ -41,8 +40,8 @@ h2 {
  
 p { 
 	color: #ffff66; 
-	margin-top: .5em;
-	font-size: .75em;
+	margin-top: .55em;
+	font-size: 1em;
 	padding-left:15px;  
 }
 
@@ -55,239 +54,24 @@ p {
 	height: 100px;
 }
 
-// ========== Carousel styling ========== //
+// Section //
 
-.carousel {
+section {
 	position: relative;
-}
-
-.shots-container {
-	width: 100%;
-	overflow-x: scroll;
-	-webkit-overflow-scrolling: touch;
-	position: relative;
-	padding: 1em 0;
-}
-
-
-.shots {
 	overflow: hidden;
-	margin: 0;
-	padding: 0 2%;
-	/*
-	 * Shot width = 400px + 20px margin + 20px padding + 2px border
-	 * 442 * 10 (# of shots)
-	 */
-	width: 2000px;
-	min-height: 300px;
-
-	@media screen and (max-width: 450px) {
-		/*
-		 * Shot width = 300px + 20px margin + 20px padding + 2px border
-		 * 342 * 10 (# of shots)
-		 */
-		width: 3420px; /* 340 * 10 */
-		min-height: 250px;
-	}
-
-	li {
-		float: left;
-		width: 400px;
-		height: 300px;
-		margin: 0 10px;
-		padding: 10px;
-		border: 1px solid #ddd;
-		@include border-radius(3px);
-
-		@media screen and (max-width: 450px) {
-			width: 300px;
-			height: 225px;
-		}
-	}
-}
-
-// ========== Thumbnail grid ========== //
-
-.og-grid {
-	list-style: none;
-	padding: 20px 0;
-	margin: 0 auto;
-	text-align: center;
 	width: 100%;
 
-	li {
-		display: inline-block;
-		margin: 10px 5px 0 5px;
-		vertical-align: top;
-		height: 250px;
+	.about:after {
+		display: block;
+		position: absolute;
+		top: -200%;
+		left: -200%;
+		height: 500%;
+		width: 200%;
+		background: #f39c12;
+		content: '';
+		z-index: -1;
 	}
-}
- 
-.og-grid li > a,
-.og-grid li > a img {
-  border: none;
-  outline: none;
-  display: block;
-  position: relative;
-}
-
-.og-grid li.og-expanded > a::after {
-  top: auto;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-bottom-color: #ddd;
-  border-width: 15px;
-  left: 50%;
-  margin: -20px 0 0 -15px;
-}
-
-.og-expander {
-  position: absolute;
-  background: #ddd;
-  top: auto;
-  left: 0;
-  width: 100%;
-  margin-top: 10px;
-  text-align: left;
-  height: 0;
-  overflow: hidden;
-}
-
-.og-expander-inner {
-  padding: 50px 30px;
-  height: 100%;
-}
-
-.og-close {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.og-close::before,
-.og-close::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  height: 1px;
-  background: #888;
-  transform: rotate(45deg);
-}
-
-.og-close::after {
-  transform: rotate(-45deg);
-}
-
-.og-close:hover::before,
-.og-close:hover::after {
-  background: #333;
-}
-
-og-fullimg,
-.og-details {
-  width: 50%;
-  float: left;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.og-details {
-    padding: 0 40px 0 20px;
-}
- 
-.og-fullimg {
-    text-align: center;
-}
- 
-.og-fullimg img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-// --- text element and link --- //
-
-.og-details h3 {
-    font-weight: 300;
-    font-size: 52px;
-    padding: 40px 0 10px;
-    margin-bottom: 10px;
-}
- 
-.og-details p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #999;
-}
- 
-.og-details a {
-    font-weight: 700;
-    font-size: 16px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border: 3px solid #333;
-    display: inline-block;
-    margin: 30px 0 0;
-    outline: none;
-}
- 
-.og-details a::before {
-    content: '\2192';
-    display: inline-block;
-    margin-right: 10px;
-}
- 
-.og-details a:hover {
-    border-color: #999;
-    color: #999;
-}
-
-// --- loading element --- //
-.og-loading {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ddd;
-    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    animation: loader 0.5s infinite ease-in-out both;
-}
- 
-@keyframes loader {
-    0% { background: #ddd; }
-    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-// --- media queries --- //
-
-@media screen and (max-width: 830px) {
- 
-    .og-expander h3 { font-size: 32px; }
-    .og-expander p { font-size: 13px; }
-    .og-expander a { font-size: 12px; }
- 
-}
- 
-@media screen and (max-width: 650px) {
- 
-    .og-fullimg { display: none; }
-    .og-details { float: none; width: 100%; }
-     
 }
 
 // ========== Footer ========== //
