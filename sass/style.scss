@@ -1,0 +1,53 @@
+@import "compass/reset";
+@import "compass/css3";
+
+body {
+	text-align: center;
+	font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	background: #1d1d1d;
+	font-size: 100%;
+}
+
+// Header
+
+h1 {
+	font-family: 'Droid Serif', serif;
+	font-size: 2.25em;
+	padding: 0 1em;
+}
+
+.header {
+	padding: 10em 0 14em;
+
+	h1 {
+		color: grey;
+	}
+}
+
+.avatar {
+	@include box-shadow(0 0 0px 3px #fff, 0 0 0 4px #ccc, 0 4px 6px #333);
+	@include border-radius(50px); // half the avatar size
+	width: 100px;
+	height: 100px;
+}
+
+h2 { 
+	color: #999;
+	margin-bottom: 0; 
+	margin-left:13px;
+	height:40px;
+}
+ 
+h2 span {
+	display: none;
+}
+ 
+p { 
+	color: #ffff66; 
+	margin-top: .5em;
+	font-size: .75em;
+	padding-left:15px;  
+}
