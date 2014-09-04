@@ -3,6 +3,7 @@
 
 // ========== Global ========== //
 
+
 $primaryBG: #1d1d1d;				// darkest gray
 $secondaryBG: #2B2B2B;			// medium gray
 $bgPop: #23221E;						// light gray
@@ -13,54 +14,32 @@ $primaryhighlight: #C25B2E;
 $primarymute: #589986;
 $secondarymute: #31454C;
 
-
 body {
 	font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
 	font-size: 100%;
 	text-align: center;
-	color: $headersPop;
+	color: #333;
 	margin: 0;
 	padding: 0;
-	position: relative;
-	background: $primaryBG;
+	background: #1d1d1d;
 }
 
 
-h1, h2, h3, h4, h5 {
+h1 {
 	font-family: 'Droid Serif', serif;
 	padding: 0 1em;
-	> span {
-		font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
+	font-size: 2.25em;
+}
+
+.header {
+	padding: 10em 0 14em;
+	h1 {
+		color: grey;
 	}
 }
 
-h1 {
-	font-size: 3.25em;
-}
-
-header {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	padding-top: 30%;
-	top: 0;
-	left: 0;
-	z-index: 999;
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	-ms-transition: height 0.3s;
-	-o-transition: height 0.3s;
-	transition: height 0.3s;
-	
-	h1 {
-		color: $primarymute;
-	}	
-}
-
-
 h2 { 
-	color: $primaryhighlight;
-	font-size: 2em;
+	color: #999;
 	margin-bottom: 0; 
 	margin-left:13px;
 	height:40px;
@@ -71,13 +50,10 @@ h2 {
 }
  
 p { 
-	color: $primaryFont; 
+	color: #ffff66; 
 	margin-top: .55em;
 	font-size: 1em;
 	padding-left:15px;  
-	> span {
-		color: $primaryhighlight; 
-	}
 }
 
 // ========== Nav and avatar styling ========== //
@@ -87,16 +63,15 @@ p {
 	@include border-radius(50px); // half the avatar size
 	width: 100px;
 	height: 100px;
-	margin: 10px;
-	padding: 2px;
 }
 
-// Sections //
+// Section //
 
 section {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+
 	.about:after {
 		display: block;
 		position: absolute;
@@ -110,30 +85,20 @@ section {
 	}
 }
 
-// thumbnails //
-
-.thumbnail {
-	background-color: $secondaryBG;
-	border: none;
-
-	img.project-thumbnail {
-		width: 100%;
-	}
-}
-
 // ========== Footer ========== //
 
-footer {
+.footer {
 	p {
 		color: #777;
 		padding: 0 1em;
 	}
 }
 
+
 // ========== Overrider ========== //
  
 .content,
-footer {
+.footer {
 	padding: 4em 0 6em;
 }
  
@@ -239,15 +204,13 @@ footer {
 
 .social {
 	margin:2em 0;
-	height: 110px;
 	font-family: Helvetica, Arial, sans-serif;
-	
+
 	li {
 		position: relative;
 		@include inline-block();
 		margin: .7em;
 		@include transition(all .15s ease);
-
 
 		&:hover {
 			@include scale(1.25);

@@ -63,79 +63,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 17, ../sass/styleORIGINAL.scss */
 body {
   font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
   font-size: 100%;
   text-align: center;
-  color: #acb2b2;
+  color: #333;
   margin: 0;
   padding: 0;
-  position: relative;
   background: #1d1d1d;
 }
 
-/* line 29, ../sass/style.scss */
-h1, h2, h3, h4, h5 {
+/* line 28, ../sass/styleORIGINAL.scss */
+h1 {
   font-family: 'Droid Serif', serif;
   padding: 0 1em;
-}
-/* line 32, ../sass/style.scss */
-h1 > span, h2 > span, h3 > span, h4 > span, h5 > span {
-  font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
+  font-size: 2.25em;
 }
 
-/* line 37, ../sass/style.scss */
-h1 {
-  font-size: 3.25em;
+/* line 34, ../sass/styleORIGINAL.scss */
+.header {
+  padding: 10em 0 14em;
+}
+/* line 36, ../sass/styleORIGINAL.scss */
+.header h1 {
+  color: grey;
 }
 
-/* line 41, ../sass/style.scss */
-header {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding-top: 30%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  -ms-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  transition: height 0.3s;
-}
-/* line 55, ../sass/style.scss */
-header h1 {
-  color: #589986;
-}
-
-/* line 61, ../sass/style.scss */
+/* line 41, ../sass/styleORIGINAL.scss */
 h2 {
-  color: #c25b2e;
-  font-size: 2em;
+  color: #999;
   margin-bottom: 0;
   margin-left: 13px;
   height: 40px;
 }
-/* line 68, ../sass/style.scss */
+/* line 47, ../sass/styleORIGINAL.scss */
 h2 span {
   display: none;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 52, ../sass/styleORIGINAL.scss */
 p {
-  color: #1b7055;
+  color: #ffff66;
   margin-top: .55em;
   font-size: 1em;
   padding-left: 15px;
 }
-/* line 78, ../sass/style.scss */
-p > span {
-  color: #c25b2e;
-}
 
-/* line 85, ../sass/style.scss */
+/* line 61, ../sass/styleORIGINAL.scss */
 .avatar {
   -moz-box-shadow: 0 0 0px 3px white, 0 0 0 4px #cccccc, 0 4px 6px #333333;
   -webkit-box-shadow: 0 0 0px 3px white, 0 0 0 4px #cccccc, 0 4px 6px #333333;
@@ -145,17 +120,15 @@ p > span {
   border-radius: 50px;
   width: 100px;
   height: 100px;
-  margin: 10px;
-  padding: 2px;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 70, ../sass/styleORIGINAL.scss */
 section {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-/* line 100, ../sass/style.scss */
+/* line 75, ../sass/styleORIGINAL.scss */
 section .about:after {
   display: block;
   position: absolute;
@@ -168,38 +141,28 @@ section .about:after {
   z-index: -1;
 }
 
-/* line 115, ../sass/style.scss */
-.thumbnail {
-  background-color: #2b2b2b;
-  border: none;
-}
-/* line 119, ../sass/style.scss */
-.thumbnail img.project-thumbnail {
-  width: 100%;
-}
-
-/* line 127, ../sass/style.scss */
-footer p {
+/* line 91, ../sass/styleORIGINAL.scss */
+.footer p {
   color: #777;
   padding: 0 1em;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 100, ../sass/styleORIGINAL.scss */
 .content,
-footer {
+.footer {
   padding: 4em 0 6em;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 105, ../sass/styleORIGINAL.scss */
 .content {
   border-top: 1px solid #010101;
   border-bottom: 1px solid #010101;
 }
-/* line 144, ../sass/style.scss */
+/* line 109, ../sass/styleORIGINAL.scss */
 .content h1 {
   color: #ea4c89;
 }
-/* line 148, ../sass/style.scss */
+/* line 113, ../sass/styleORIGINAL.scss */
 .content > p {
   font-size: .85em;
   color: #aaa;
@@ -212,7 +175,7 @@ footer {
   font-weight: normal;
   font-style: normal;
 }
-/* line 168, ../sass/style.scss */
+/* line 133, ../sass/styleORIGINAL.scss */
 .icon-location:before,
 .icon-bubble:before,
 .icon-spinner:before,
@@ -237,88 +200,87 @@ footer {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 158, ../sass/styleORIGINAL.scss */
 .icon-location:before {
   content: "\e600";
 }
 
-/* line 196, ../sass/style.scss */
+/* line 161, ../sass/styleORIGINAL.scss */
 .icon-bubble:before {
   content: "\e601";
 }
 
-/* line 199, ../sass/style.scss */
+/* line 164, ../sass/styleORIGINAL.scss */
 .icon-spinner:before {
   content: "\e602";
 }
 
-/* line 202, ../sass/style.scss */
+/* line 167, ../sass/styleORIGINAL.scss */
 .icon-attachment:before {
   content: "\e603";
 }
 
-/* line 205, ../sass/style.scss */
+/* line 170, ../sass/styleORIGINAL.scss */
 .icon-arrow-up:before {
   content: "\e604";
 }
 
-/* line 208, ../sass/style.scss */
+/* line 173, ../sass/styleORIGINAL.scss */
 .icon-arrow-right:before {
   content: "\e605";
 }
 
-/* line 211, ../sass/style.scss */
+/* line 176, ../sass/styleORIGINAL.scss */
 .icon-arrow-down:before {
   content: "\e606";
 }
 
-/* line 214, ../sass/style.scss */
+/* line 179, ../sass/styleORIGINAL.scss */
 .icon-arrow-left:before {
   content: "\e607";
 }
 
-/* line 217, ../sass/style.scss */
+/* line 182, ../sass/styleORIGINAL.scss */
 .icon-googleplus:before {
   content: "\e608";
 }
 
-/* line 220, ../sass/style.scss */
+/* line 185, ../sass/styleORIGINAL.scss */
 .icon-facebook:before {
   content: "\e609";
 }
 
-/* line 223, ../sass/style.scss */
+/* line 188, ../sass/styleORIGINAL.scss */
 .icon-github:before {
   content: "\e60a";
 }
 
-/* line 226, ../sass/style.scss */
+/* line 191, ../sass/styleORIGINAL.scss */
 .icon-tumblr:before {
   content: "\e60b";
 }
 
-/* line 229, ../sass/style.scss */
+/* line 194, ../sass/styleORIGINAL.scss */
 .icon-linkedin:before {
   content: "\e60c";
 }
 
-/* line 232, ../sass/style.scss */
+/* line 197, ../sass/styleORIGINAL.scss */
 .icon-stackoverflow:before {
   content: "\e60d";
 }
 
-/* line 235, ../sass/style.scss */
+/* line 200, ../sass/styleORIGINAL.scss */
 .icon-file-pdf:before {
   content: "\e60e";
 }
 
-/* line 240, ../sass/style.scss */
+/* line 205, ../sass/styleORIGINAL.scss */
 .social {
   margin: 2em 0;
-  height: 110px;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 245, ../sass/style.scss */
+/* line 209, ../sass/styleORIGINAL.scss */
 .social li {
   position: relative;
   display: inline-block;
@@ -332,7 +294,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 252, ../sass/style.scss */
+/* line 215, ../sass/styleORIGINAL.scss */
 .social li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -340,7 +302,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 257, ../sass/style.scss */
+/* line 220, ../sass/styleORIGINAL.scss */
 .social li:before {
   position: absolute;
   width: 2em;
@@ -349,7 +311,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 265, ../sass/style.scss */
+/* line 228, ../sass/styleORIGINAL.scss */
 .social li a {
   text-decoration: none;
   display: block;
@@ -363,78 +325,78 @@ footer {
 }
 
 /* Tumblr */
-/* line 281, ../sass/style.scss */
+/* line 244, ../sass/styleORIGINAL.scss */
 .icon-tumblr {
   color: #304d6b;
 }
 
-/* line 282, ../sass/style.scss */
+/* line 245, ../sass/styleORIGINAL.scss */
 .icon-tumblr:hover {
   background: #304d6b;
 }
 
 /* Instagram */
-/* line 284, ../sass/style.scss */
+/* line 247, ../sass/styleORIGINAL.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 285, ../sass/style.scss */
+/* line 248, ../sass/styleORIGINAL.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 287, ../sass/style.scss */
+/* line 250, ../sass/styleORIGINAL.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 288, ../sass/style.scss */
+/* line 251, ../sass/styleORIGINAL.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* Google-Plus */
-/* line 290, ../sass/style.scss */
+/* line 253, ../sass/styleORIGINAL.scss */
 .icon-googleplus {
   color: #da4937;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 254, ../sass/styleORIGINAL.scss */
 .icon-googleplus:hover {
   background: #da4937;
 }
 
 /* Github */
-/* line 293, ../sass/style.scss */
+/* line 256, ../sass/styleORIGINAL.scss */
 .icon-github {
   color: #f5f5f5;
 }
 
-/* line 294, ../sass/style.scss */
+/* line 257, ../sass/styleORIGINAL.scss */
 .icon-github:hover {
   background: #333333;
 }
 
 /* Stackoverflow */
-/* line 296, ../sass/style.scss */
+/* line 259, ../sass/styleORIGINAL.scss */
 .icon-stackoverflow {
   color: #ff771b;
 }
 
-/* line 297, ../sass/style.scss */
+/* line 260, ../sass/styleORIGINAL.scss */
 .icon-stackoverflow:hover {
   background: #ff771b;
 }
 
 /* LinkedIn */
-/* line 299, ../sass/style.scss */
+/* line 262, ../sass/styleORIGINAL.scss */
 .icon-linkedin {
   color: #1b86bc;
 }
 
-/* line 300, ../sass/style.scss */
+/* line 263, ../sass/styleORIGINAL.scss */
 .icon-linkedin:hover {
   background: #1b86bc;
 }

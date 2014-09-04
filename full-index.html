@@ -9,56 +9,112 @@
 		<![endif]-->
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif|Raleway">
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/jquery.panelSnap.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/tooltip.js"></script>
+		<script type="text/javascript" src="js/classie.js"></script>		
 		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 
 	<body>
-		<header id="headerContainer" class="header">
-			<img src="https://avatars2.githubusercontent.com/u/6846052?v=2&s=460" width="100" height="100" class="avatar" alt=""/>
-			<h1>Hi there - I'm Fai!<br/>So nice of you to drop by. </h1>
-			<div class="menu"> 
-				<a href="" data-panel="first" class="active"> First panel </a>
-				<a href="" data-panel="second" class=""> Second panel </a> 
-				<a href="" data-panel="third"> Third panel </a> 
+		<div class="container">
+			<header id="headerContainer" class="header">
+
+					<img src="https://avatars2.githubusercontent.com/u/6846052?v=2&s=460" width="100" height="100" class="avatar" alt=""/>
+	        <h1 id="logo">FAI WEINER</h1>
+	        <h3><span>full-stack developer</span></h3>
+
+			</header>
+
+		<!-- -->
+			<div class="panel_container">
+				<section data-panel="first" id="first-panel">
+					<div class="thumbnail">
+						<div class="row">
+							<h1 class="col-md-5">About Me</h1>
+							<div class="col-md-6">
+								<p>I'm an ex-PR pro turned full-stack Web developer <br>living in sunny Sydney, Australia.</p>
+								<p><span>Ruby on Rails</span> fanatic, <span>jQuery</span> enthusiast, <br><span>Bootstrap</span> guru and an entrepreneur at heart.</p>
+								<p>I'm always looking for new challenges and discovering new things to learn. I also love connecting with people who are passionate about their craft, so feel free to drop me a line.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-panel="second">
+					<h1>Projects</h1>
+					<div class="subsection col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<h2>Shuffla</h2>
+							<img src="images/shuffla-mobile.jpg" alt="Shuffla" class="project-thumbnail">
+							<p>Gamifying your song knowledge, Shuffla lets users guess the name and artist of songs. Users can pick games based on artist or genre, and can compete against friends.</p>
+							<ul class="tags">
+								<li>Ruby on Rails</li>
+								<li>PostgreSQL</li>
+								<li>Spotify & RSpotify API</li>
+								<li>Facebook & Instagram API</li>
+								<li>SASS</li>
+								<li>Bootstrap</li>
+								<li>Haml</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="subsection col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<h2>Bero</h2>
+							<img src="images/bero-compass.png" alt="" class="project-thumbnail">
+							<p>The digital version of a childhood favorite "Marco Polo", Bero helps users locate friends with real-time geolocation.</p>
+							<ul class="tags">
+								<li>Ruby on Rails</li>
+								<li>PostgreSQL</li>
+								<li>JavaScript & jQuery</li>
+								<li>GoogleMaps API</li>
+								<li>Geolocator API</li>
+								<li>Instagram API</li>
+								<li>Bootstrap</li>
+								<li>Haml</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="subsection col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<h2>Reality League</h2>
+							<img src="images/realityleague.jpg" alt="" class="project-thumbnail">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor tenetur fugiat cumque labore eligendi quisquam, aliquid! Nobis error, quidem atque et tenetur iure similique dolore veritatis aliquam facere labore.</p>
+							<ul class="tags">
+								<li>Ruby on Rails</li>
+								<li>PostgreSQL</li>
+								<li>Javascript</li>
+								<li>jQuery</li>
+								<li>AJAX</li>
+								<li>Backbone.js</li>
+								<li>Handlebar</li>
+								<li>Underscore</li>
+								<li>Bootstrap</li>
+							</ul>
+						</div>
+					</div>					
+				</section>
 			</div>
+		<!-- -->
+		</div>
+		<footer id="footer">
 
-		</header>
-
-    <div class="panel_container">
-      <section data-panel="first">
-        <h1>About Me</h1>
-        <p>I'm an ex-PR pro turned full-stack Web Developer.</p>
-      </section>
-      <section data-panel="second">
-        <h1>Second section</h1>
-      </section>
-      <section data-panel="third">
-        <h1>Third section</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ad facere, nemo. Consequatur, pariatur sed. Quia, iure deleniti dolorem consequuntur nisi non ullam, consequatur quas, vitae magnam officia unde, eius.</div>
-        <div>Minima, tempora deserunt labore dolor sint iusto commodi ex doloribus libero animi nesciunt perferendis asperiores harum nobis quos quibusdam iure a, eos assumenda excepturi explicabo praesentium at repellat ad! Impedit.</div>
-      </section>
-    </div>
-
-		<footer>
-
-			<h1>Find Me on the Web</h1>
-			<p>You can contact or follow me via any of these services:</p>
-			<ul class="social">
-				<li class="icon-github"><a href="#">Github</a></li>
-				<li class="icon-linkedin"><a href="#">LinkedIn</a></li>
-				<li class="icon-tumblr"><a href="#">Tumblr</a></li>
-				<li class="icon-facebook"><a href="#">Facebook</a></li>
-				<li class="icon-googleplus"><a href="#">Google+</a></li>
-				<li class="icon-stackoverflow"><a href="#">Stack<br>Overflow</a></li>
-			</ul>
+				<h1>Find Me on the Web</h1>
+				<p>You can contact or follow me via any of these services:</p>
+				<ul class="social">
+					<li class="icon-github"><a href="https://github.com/faiweiner">Github</a></li>
+					<li class="icon-linkedin"><a href="au.linkedin.com/in/faiweiner/">LinkedIn</a></li>
+					<li class="icon-tumblr"><a href="http://faiweiner.tumblr.com/">Tumblr</a></li>
+					<li class="icon-googleplus"><a href="https://plus.google.com/u/1/109219557915889722513/posts">Google+</a></li>
+					<li class="icon-stackoverflow"><a href="http://stackexchange.com/users/4956508/fai-weiner">Stack<br>Overflow</a></li>
+				</ul>
 		</footer>
-		<script>
-      $('body').panelSnap();
-		</script>
 	</body>
 </html>
