@@ -1,157 +1,22 @@
 @import "compass/reset";
 @import "compass/css3";
 
-// ========== Global ========== //
+// ========== Variable Bank ========== //
 
-$primaryBG: #1d1d1d;				// darkest gray
-$secondaryBG: #2B2B2B;			// medium gray
-$bgPop: #23221E;						// light gray
+$primaryBG: #FFFFFF;				// light gray
+$secondaryBG: #B3ADA7;			// darker gray
 
-$headersPop: #ACB2B2;
-$primaryFont: #1B7055;
-$primaryhighlight: #C25B2E;
-$primarymute: #589986;
-$secondarymute: #31454C;
+$navLight: #ACB2B2;
+$navDark: #3B6986;
 
+$primaryFontFamily: 'Raleway', "Lucida Grande", Verdana, sans-serif;
+$secondaryFontFamily: 'Droid Serif', serif;
+$socialFontFamily: Helvetica, Arial, sans-serif;
+$primaryFontColor: #3B3B3A;
+$primaryhighlight: #8C1357;
 
-body {
-	font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
-	font-size: 100%;
-	text-align: center;
-	color: $headersPop;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	background: $primaryBG;
-}
-
-
-h1, h2, h3, h4, h5 {
-	font-family: 'Droid Serif', serif;
-	padding: 0 1em;
-	> span {
-		font-family: 'Raleway', "Lucida Grande", Verdana, sans-serif;
-	}
-}
-
-h1 {
-	font-size: 3.25em;
-}
-
-header {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	padding-top: 30%;
-	top: 0;
-	left: 0;
-	z-index: 999;
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	-ms-transition: height 0.3s;
-	-o-transition: height 0.3s;
-	transition: height 0.3s;
-	
-	h1 {
-		color: $primarymute;
-	}	
-}
-
-
-h2 { 
-	color: $primaryhighlight;
-	font-size: 2em;
-	margin-bottom: 0; 
-	margin-left:13px;
-	height:40px;
-
-	span {
-	display: none;
-	}
-}
- 
-p { 
-	color: $primaryFont; 
-	margin-top: .55em;
-	font-size: 1em;
-	padding-left:15px;  
-	> span {
-		color: $primaryhighlight; 
-	}
-}
-
-// ========== Nav and avatar styling ========== //
-
-.avatar {
-	@include box-shadow(0 0 0px 3px #fff, 0 0 0 4px #ccc, 0 4px 6px #333);
-	@include border-radius(50px); // half the avatar size
-	width: 100px;
-	height: 100px;
-	margin: 10px;
-	padding: 2px;
-}
-
-// Sections //
-
-section {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	.about:after {
-		display: block;
-		position: absolute;
-		top: -200%;
-		left: -200%;
-		height: 500%;
-		width: 200%;
-		background: #f39c12;
-		content: '';
-		z-index: -1;
-	}
-}
-
-// thumbnails //
-
-.thumbnail {
-	background-color: $secondaryBG;
-	border: none;
-
-	img.project-thumbnail {
-		width: 100%;
-	}
-}
-
-// ========== Footer ========== //
-
-footer {
-	p {
-		color: #777;
-		padding: 0 1em;
-	}
-}
-
-// ========== Overrider ========== //
- 
-.content,
-footer {
-	padding: 4em 0 6em;
-}
- 
-.content {
-	border-top: 1px solid #010101;
-	border-bottom: 1px solid #010101;
-
-	h1 {
-		color: #ea4c89; // dribbble brand color
-	}
-
-	> p {
-		font-size: .85em;
-		color: #aaa;
-	}
-}
-
-// font styling
+// ========== Font Face ========== //
+// icomoon font styling
 
 @font-face {
 	font-family: 'icomoon';
@@ -164,7 +29,156 @@ footer {
 	font-style: normal;
 }
 
-// Shared styles
+// BP menu font styling
+
+@font-face {
+	font-family: 'bpmenu';
+	src:url('../fonts/bpmenu/bpmenu.eot');
+	src:url('../fonts/bpmenu/bpmenu.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/bpmenu/bpmenu.woff') format('woff'),
+		url('../fonts/bpmenu/bpmenu.ttf') format('truetype'),
+		url('../fonts/bpmenu/bpmenu.svg#bpmenu') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// ========== Global Styling ========== //
+
+body {
+	font-family: $primaryFontFamily;
+	color: $primaryFontColor;
+	background-color: $primaryBG;
+	font-size: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+h1 {
+	font-size: 3.25em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+p { 
+	color: $primaryFontColor; 
+	margin-top: .55em;
+	font-size: 1em;
+	> span {
+		color: $primaryhighlight; 
+	}
+}
+
+.container {
+	max-width: 960px;
+	margin: auto auto;
+	position: relative;
+	display: inline-block;
+}
+
+.project-thumbnail {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+.headroom {
+	position: fixed;
+    transition: transform 400ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.logo	{
+	text-align: center;
+	background-color: $primaryBG;
+}
+.scroll-up-button, nav {
+	> a {
+		text-decoration: none;
+		text-align: right;
+	}
+	background-color: $primaryBG;
+	padding: 10px;
+}
+
+.avatar {
+	max-height: 100px;
+}
+
+.space-column {
+	background-color: blue;
+	width: 200px;
+}
+.content-column {
+	background-color: red;
+	max-width: 80%
+}
+
+.about-me-content {
+	width: 70%;
+	margin: 0 auto;
+}
+// ========== Find Me Section Styling ========== //
+
+/* --- Overrider --- */
+ 
+footer {
+	padding: 4em 0 6em;
+}
+
+.socials {
+	margin:2em 0;
+	height: 30vh;
+	font-family: $socialFontFamily;
+	
+	li {
+		position: relative;
+		@include inline-block();
+		margin: .7em;
+		@include transition(all .15s ease);
+
+
+		&:hover {
+			@include scale(1.25);
+			color: white;
+		}
+
+		&:before {
+			position: absolute;
+			width: 2em; /* center align technique, give width, negative half margin */
+			margin-left: -1em;
+			top: 1.5em;
+			left: 50%;
+		}
+
+		a {
+			text-decoration: none;
+			display: block;
+			color: inherit;
+			padding: 2.5em 1em 1em;
+			width: 6em;
+			height: 2em;
+			// allow truncation if needed
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+ 
+/* --- Shared Styles --- */
+
 .icon-location:before,
 .icon-bubble:before,
 .icon-spinner:before,
@@ -188,7 +202,8 @@ footer {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-// Individual characters
+
+/* --- Individual Styles --- */
 
 .icon-location:before {
 	content: "\e600";
@@ -240,7 +255,7 @@ footer {
 .social {
 	margin:2em 0;
 	height: 110px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: $socialFontFamily;
 	
 	li {
 		position: relative;
