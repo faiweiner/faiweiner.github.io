@@ -120,7 +120,7 @@ body {
 
 /* line 84, ../sass/style.scss */
 h1 {
-  margin-top: 0.5em;
+  margin-top: 0.25em;
   font-size: 3.25em;
 }
 
@@ -189,12 +189,12 @@ p > span {
 /* --- Overrider --- */
 /* line 143, ../sass/style.scss */
 footer {
-  padding: 4em 0 6em;
+  padding: 2em;
 }
 
 /* line 147, ../sass/style.scss */
 .projects {
-  margin: 2em 0;
+  margin: 2em 0 4em;
   height: 30vh;
   font-family: "Raleway", "Lucida Grande", Verdana, sans-serif;
 }
@@ -237,7 +237,7 @@ footer {
   padding: 0.7em 0.3em 0.3em;
   height: 2em;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 /* --- Shared Styles --- */
@@ -393,88 +393,109 @@ footer {
 }
 
 /* line 300, ../sass/style.scss */
-.thumbnail-shuffla, .thumbnail-bero, .thumbnail-trl {
+.thumbnail-shuffla,
+.thumbnail-bero,
+.thumbnail-trl {
   color: #304d6b;
+  background-color: white;
+  border: 1px solid #304d6b;
 }
 
-/* line 301, ../sass/style.scss */
-.thumbnail-shuffla:hover, .thumbnail-bero:hover, .thumbnail-trl:hover {
+/* line 308, ../sass/style.scss */
+.thumbnail-shuffla:hover,
+.thumbnail-bero:hover,
+.thumbnail-trl:hover {
   background: #304d6b;
 }
 
 /* Tumblr */
-/* line 303, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .icon-tumblr {
   color: #304d6b;
 }
 
-/* line 304, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .icon-tumblr:hover {
   background: #304d6b;
 }
 
 /* Instagram */
-/* line 306, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 307, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 309, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 310, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* Google-Plus */
-/* line 312, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .icon-googleplus {
   color: #da4937;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .icon-googleplus:hover {
   background: #da4937;
 }
 
 /* Github */
-/* line 315, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .icon-github {
-  color: #f5f5f5;
+  color: #B3ADA7;
 }
 
-/* line 316, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .icon-github:hover {
   background: #333333;
 }
 
 /* Stackoverflow */
-/* line 318, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .icon-stackoverflow {
   color: #ff771b;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .icon-stackoverflow:hover {
   background: #ff771b;
 }
 
 /* LinkedIn */
-/* line 321, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .icon-linkedin {
   color: #1b86bc;
 }
 
-/* line 322, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 .icon-linkedin:hover {
   background: #1b86bc;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 338, ../sass/style.scss */
+  .content-row .projects > li img {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 346, ../sass/style.scss */
+  .content-row {
+    font-size: 120%;
+    height: 75vh;
+    margin-bottom: 1em;
+  }
 }

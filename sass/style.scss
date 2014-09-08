@@ -82,7 +82,7 @@ body {
 }
 
 h1 {
-	margin-top: 0.5em;
+	margin-top: 0.25em;
 	font-size: 3.25em;
 }
 
@@ -127,13 +127,13 @@ p {
 
 .headroom {
 	position: fixed;
-    transition: transform 400ms linear;
+		transition: transform 400ms linear;
 }
 .headroom--pinned {
-    transform: translateY(0%);
+		transform: translateY(0%);
 }
 .headroom--unpinned {
-    transform: translateY(-100%);
+		transform: translateY(-100%);
 }
 
 // ========== Find Me Section Styling ========== //
@@ -141,11 +141,11 @@ p {
 /* --- Overrider --- */
  
 footer {
-	padding: 4em 0 6em;
+	padding: 2em;
 }
 
 .projects {
-	margin:2em 0;
+	margin:2em 0 4em;
 	height: 30vh;
 	font-family: $primaryFontFamily; 
 	
@@ -177,7 +177,7 @@ footer {
 			height: 2em;
 			// allow truncation if needed
 			overflow: hidden;
-			white-space: nowrap;
+			white-space: wrap;
 		}
 	}
 }
@@ -297,8 +297,18 @@ footer {
 	}
 }
 
-.thumbnail-shuffla, .thumbnail-bero, .thumbnail-trl {color: #304d6b};
-.thumbnail-shuffla:hover, .thumbnail-bero:hover, .thumbnail-trl:hover {background: #304d6b};
+.thumbnail-shuffla, 
+.thumbnail-bero, 
+.thumbnail-trl {
+	color: #304d6b;
+	background-color: $primaryBG;
+	border: 1px solid #304d6b;
+}
+
+.thumbnail-shuffla:hover, 
+.thumbnail-bero:hover, 
+.thumbnail-trl:hover 
+	{background: #304d6b}
 /* Tumblr */
 .icon-tumblr {color: #304d6b}
 .icon-tumblr:hover {background:#304d6b}
@@ -312,7 +322,7 @@ footer {
 .icon-googleplus {color: #da4937}
 .icon-googleplus:hover {background: #da4937}
 /* Github */
-.icon-github {color: #f5f5f5}
+.icon-github {color: #B3ADA7}
 .icon-github:hover {background: #333333}
 /* Stackoverflow */
 .icon-stackoverflow {color: #ff771b}
@@ -320,3 +330,22 @@ footer {
 /* LinkedIn */ 
 .icon-linkedin {color: #1b86bc}
 .icon-linkedin:hover {background: #1b86bc}
+
+
+@media screen and (max-width: 400px){
+	.content-row {
+		.projects > li {
+			img {
+				height: 100px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px){
+	.content-row{
+		font-size: 120%;
+		height: 75vh;
+		margin-bottom: 1em;
+	}
+}
