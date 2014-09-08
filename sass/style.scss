@@ -75,17 +75,14 @@ p {
 .container {
 	max-width: 960px;
 	margin: auto auto;
+	position: relative;
+	display: inline-block;
 }
 
 .project-thumbnail {
 	max-height: 200px;
 	max-width: 200px;
 }
-
-.content {
-	height: 20vh;
-}
-
 
 /**
  * Note: I have omitted any vendor-prefixes for clarity.
@@ -118,11 +115,24 @@ p {
 .avatar {
 	max-height: 100px;
 }
+
+.space-column {
+	background-color: blue;
+	width: 200px;
+}
+.content-column {
+	background-color: red;
+	max-width: 80%
+}
+
+.about-me-content {
+	width: 70%;
+	margin: 0 auto;
+}
 // ========== Find Me Section Styling ========== //
 
 /* --- Overrider --- */
  
-.content,
 footer {
 	padding: 4em 0 6em;
 }

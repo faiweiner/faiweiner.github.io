@@ -114,75 +114,89 @@ p > span {
 .container {
   max-width: 960px;
   margin: auto auto;
+  position: relative;
+  display: inline-block;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .project-thumbnail {
   max-height: 200px;
   max-width: 200px;
-}
-
-/* line 85, ../sass/style.scss */
-.content {
-  height: 20vh;
 }
 
 /**
  * Note: I have omitted any vendor-prefixes for clarity.
  * Adding them is left as an exercise for the reader.
  */
-/* line 94, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .headroom {
   position: fixed;
   transition: transform 400ms linear;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .headroom--pinned {
   transform: translateY(0%);
 }
 
-/* line 101, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .headroom--unpinned {
   transform: translateY(-100%);
 }
 
-/* line 105, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .logo {
   text-align: center;
   background-color: white;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .scroll-up-button, nav {
   background-color: white;
   padding: 10px;
 }
-/* line 110, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .scroll-up-button > a, nav > a {
   text-decoration: none;
   text-align: right;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .avatar {
   max-height: 100px;
 }
 
+/* line 119, ../sass/style.scss */
+.space-column {
+  background-color: blue;
+  width: 200px;
+}
+
+/* line 123, ../sass/style.scss */
+.content-column {
+  background-color: red;
+  max-width: 80%;
+}
+
+/* line 128, ../sass/style.scss */
+.about-me-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
 /* --- Overrider --- */
-/* line 125, ../sass/style.scss */
-.content,
+/* line 136, ../sass/style.scss */
 footer {
   padding: 4em 0 6em;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .socials {
   margin: 2em 0;
   height: 30vh;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 135, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .socials li {
   position: relative;
   display: inline-block;
@@ -196,7 +210,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 142, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .socials li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -204,7 +218,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 147, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 .socials li:before {
   position: absolute;
   width: 2em;
@@ -213,7 +227,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 155, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .socials li a {
   text-decoration: none;
   display: block;
@@ -227,7 +241,7 @@ footer {
 }
 
 /* --- Shared Styles --- */
-/* line 172, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .icon-location:before,
 .icon-bubble:before,
 .icon-spinner:before,
@@ -253,88 +267,88 @@ footer {
 }
 
 /* --- Individual Styles --- */
-/* line 198, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .icon-location:before {
   content: "\e600";
 }
 
-/* line 201, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .icon-bubble:before {
   content: "\e601";
 }
 
-/* line 204, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .icon-spinner:before {
   content: "\e602";
 }
 
-/* line 207, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .icon-attachment:before {
   content: "\e603";
 }
 
-/* line 210, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .icon-arrow-up:before {
   content: "\e604";
 }
 
-/* line 213, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 .icon-arrow-right:before {
   content: "\e605";
 }
 
-/* line 216, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .icon-arrow-down:before {
   content: "\e606";
 }
 
-/* line 219, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .icon-arrow-left:before {
   content: "\e607";
 }
 
-/* line 222, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .icon-googleplus:before {
   content: "\e608";
 }
 
-/* line 225, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 .icon-facebook:before {
   content: "\e609";
 }
 
-/* line 228, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .icon-github:before {
   content: "\e60a";
 }
 
-/* line 231, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .icon-tumblr:before {
   content: "\e60b";
 }
 
-/* line 234, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .icon-linkedin:before {
   content: "\e60c";
 }
 
-/* line 237, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .icon-stackoverflow:before {
   content: "\e60d";
 }
 
-/* line 240, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .icon-file-pdf:before {
   content: "\e60e";
 }
 
-/* line 245, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .social {
   margin: 2em 0;
   height: 110px;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 250, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .social li {
   position: relative;
   display: inline-block;
@@ -348,7 +362,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 257, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .social li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -356,7 +370,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 262, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 .social li:before {
   position: absolute;
   width: 2em;
@@ -365,7 +379,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 270, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .social li a {
   text-decoration: none;
   display: block;
@@ -379,78 +393,78 @@ footer {
 }
 
 /* Tumblr */
-/* line 286, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .icon-tumblr {
   color: #304d6b;
 }
 
-/* line 287, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .icon-tumblr:hover {
   background: #304d6b;
 }
 
 /* Instagram */
-/* line 289, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 292, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 293, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* Google-Plus */
-/* line 295, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .icon-googleplus {
   color: #da4937;
 }
 
-/* line 296, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .icon-googleplus:hover {
   background: #da4937;
 }
 
 /* Github */
-/* line 298, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .icon-github {
   color: #f5f5f5;
 }
 
-/* line 299, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .icon-github:hover {
   background: #333333;
 }
 
 /* Stackoverflow */
-/* line 301, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 .icon-stackoverflow {
   color: #ff771b;
 }
 
-/* line 302, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .icon-stackoverflow:hover {
   background: #ff771b;
 }
 
 /* LinkedIn */
-/* line 304, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .icon-linkedin {
   color: #1b86bc;
 }
 
-/* line 305, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .icon-linkedin:hover {
   background: #1b86bc;
 }
