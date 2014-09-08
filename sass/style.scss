@@ -11,6 +11,7 @@ $navDark: #3B6986;
 
 $primaryFontFamily: 'Raleway', "Lucida Grande", Verdana, sans-serif;
 $secondaryFontFamily: 'Droid Serif', serif;
+$socialFontFamily: Helvetica, Arial, sans-serif;
 $primaryFontColor: #3B3B3A;
 $primaryhighlight: #8C1357;
 
@@ -66,16 +67,57 @@ p {
 	color: $primaryFontColor; 
 	margin-top: .55em;
 	font-size: 1em;
-	padding-left:15px;  
 	> span {
 		color: $primaryhighlight; 
 	}
 }
 
-.project-thumbnail {
-	max-height: 200px;
+.container {
+	max-width: 960px;
+	margin: auto auto;
 }
 
+.project-thumbnail {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.content {
+	height: 20vh;
+}
+
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+.headroom {
+	position: fixed;
+    transition: transform 400ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.logo	{
+	text-align: center;
+	background-color: $primaryBG;
+}
+.scroll-up-button, nav {
+	> a {
+		text-decoration: none;
+		text-align: right;
+	}
+	background-color: $primaryBG;
+	padding: 10px;
+}
+
+.avatar {
+	max-height: 100px;
+}
 // ========== Find Me Section Styling ========== //
 
 /* --- Overrider --- */
@@ -84,21 +126,47 @@ p {
 footer {
 	padding: 4em 0 6em;
 }
- 
-.content {
-	border-top: 1px solid #010101;
-	border-bottom: 1px solid #010101;
 
-	h1 {
-		color: #ea4c89; // dribbble brand color
-	}
+.socials {
+	margin:2em 0;
+	height: 30vh;
+	font-family: $socialFontFamily;
+	
+	li {
+		position: relative;
+		@include inline-block();
+		margin: .7em;
+		@include transition(all .15s ease);
 
-	> p {
-		font-size: .85em;
-		color: #aaa;
+
+		&:hover {
+			@include scale(1.25);
+			color: white;
+		}
+
+		&:before {
+			position: absolute;
+			width: 2em; /* center align technique, give width, negative half margin */
+			margin-left: -1em;
+			top: 1.5em;
+			left: 50%;
+		}
+
+		a {
+			text-decoration: none;
+			display: block;
+			color: inherit;
+			padding: 2.5em 1em 1em;
+			width: 6em;
+			height: 2em;
+			// allow truncation if needed
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
 	}
 }
-
+ 
 /* --- Shared Styles --- */
 
 .icon-location:before,
@@ -177,7 +245,7 @@ footer {
 .social {
 	margin:2em 0;
 	height: 110px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: $socialFontFamily;
 	
 	li {
 		position: relative;

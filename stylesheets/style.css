@@ -77,7 +77,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-/* line 46, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 body {
   font-family: "Raleway", "Lucida Grande", Verdana, sans-serif;
   color: #3b3b3a;
@@ -89,22 +89,21 @@ body {
   position: relative;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 h1 {
   font-size: 3.25em;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 p {
   color: #3b3b3a;
   margin-top: .55em;
   font-size: 1em;
-  padding-left: 15px;
 }
 /* line 70, ../sass/style.scss */
 p > span {
@@ -112,34 +111,123 @@ p > span {
 }
 
 /* line 75, ../sass/style.scss */
+.container {
+  max-width: 960px;
+  margin: auto auto;
+}
+
+/* line 80, ../sass/style.scss */
 .project-thumbnail {
   max-height: 200px;
+  max-width: 200px;
+}
+
+/* line 85, ../sass/style.scss */
+.content {
+  height: 20vh;
+}
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+/* line 94, ../sass/style.scss */
+.headroom {
+  position: fixed;
+  transition: transform 400ms linear;
+}
+
+/* line 98, ../sass/style.scss */
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+/* line 101, ../sass/style.scss */
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+/* line 105, ../sass/style.scss */
+.logo {
+  text-align: center;
+  background-color: white;
+}
+
+/* line 109, ../sass/style.scss */
+.scroll-up-button, nav {
+  background-color: white;
+  padding: 10px;
+}
+/* line 110, ../sass/style.scss */
+.scroll-up-button > a, nav > a {
+  text-decoration: none;
+  text-align: right;
+}
+
+/* line 118, ../sass/style.scss */
+.avatar {
+  max-height: 100px;
 }
 
 /* --- Overrider --- */
-/* line 83, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content,
 footer {
   padding: 4em 0 6em;
 }
 
-/* line 88, ../sass/style.scss */
-.content {
-  border-top: 1px solid #010101;
-  border-bottom: 1px solid #010101;
+/* line 130, ../sass/style.scss */
+.socials {
+  margin: 2em 0;
+  height: 30vh;
+  font-family: Helvetica, Arial, sans-serif;
 }
-/* line 92, ../sass/style.scss */
-.content h1 {
-  color: #ea4c89;
+/* line 135, ../sass/style.scss */
+.socials li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: .7em;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
-/* line 96, ../sass/style.scss */
-.content > p {
-  font-size: .85em;
-  color: #aaa;
+/* line 142, ../sass/style.scss */
+.socials li:hover {
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+  color: white;
+}
+/* line 147, ../sass/style.scss */
+.socials li:before {
+  position: absolute;
+  width: 2em;
+  /* center align technique, give width, negative half margin */
+  margin-left: -1em;
+  top: 1.5em;
+  left: 50%;
+}
+/* line 155, ../sass/style.scss */
+.socials li a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  padding: 2.5em 1em 1em;
+  width: 6em;
+  height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* --- Shared Styles --- */
-/* line 104, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .icon-location:before,
 .icon-bubble:before,
 .icon-spinner:before,
@@ -165,88 +253,88 @@ footer {
 }
 
 /* --- Individual Styles --- */
-/* line 130, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .icon-location:before {
   content: "\e600";
 }
 
-/* line 133, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .icon-bubble:before {
   content: "\e601";
 }
 
-/* line 136, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 .icon-spinner:before {
   content: "\e602";
 }
 
-/* line 139, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .icon-attachment:before {
   content: "\e603";
 }
 
-/* line 142, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 .icon-arrow-up:before {
   content: "\e604";
 }
 
-/* line 145, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .icon-arrow-right:before {
   content: "\e605";
 }
 
-/* line 148, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .icon-arrow-down:before {
   content: "\e606";
 }
 
-/* line 151, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .icon-arrow-left:before {
   content: "\e607";
 }
 
-/* line 154, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .icon-googleplus:before {
   content: "\e608";
 }
 
-/* line 157, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .icon-facebook:before {
   content: "\e609";
 }
 
-/* line 160, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 .icon-github:before {
   content: "\e60a";
 }
 
-/* line 163, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 .icon-tumblr:before {
   content: "\e60b";
 }
 
-/* line 166, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .icon-linkedin:before {
   content: "\e60c";
 }
 
-/* line 169, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .icon-stackoverflow:before {
   content: "\e60d";
 }
 
-/* line 172, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .icon-file-pdf:before {
   content: "\e60e";
 }
 
-/* line 177, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 .social {
   margin: 2em 0;
   height: 110px;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 182, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .social li {
   position: relative;
   display: inline-block;
@@ -260,7 +348,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 189, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 .social li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -268,7 +356,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 194, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .social li:before {
   position: absolute;
   width: 2em;
@@ -277,7 +365,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 202, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .social li a {
   text-decoration: none;
   display: block;
@@ -291,78 +379,78 @@ footer {
 }
 
 /* Tumblr */
-/* line 218, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .icon-tumblr {
   color: #304d6b;
 }
 
-/* line 219, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .icon-tumblr:hover {
   background: #304d6b;
 }
 
 /* Instagram */
-/* line 221, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 222, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 224, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 225, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* Google-Plus */
-/* line 227, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 .icon-googleplus {
   color: #da4937;
 }
 
-/* line 228, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .icon-googleplus:hover {
   background: #da4937;
 }
 
 /* Github */
-/* line 230, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .icon-github {
   color: #f5f5f5;
 }
 
-/* line 231, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .icon-github:hover {
   background: #333333;
 }
 
 /* Stackoverflow */
-/* line 233, ../sass/style.scss */
+/* line 301, ../sass/style.scss */
 .icon-stackoverflow {
   color: #ff771b;
 }
 
-/* line 234, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .icon-stackoverflow:hover {
   background: #ff771b;
 }
 
 /* LinkedIn */
-/* line 236, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .icon-linkedin {
   color: #1b86bc;
 }
 
-/* line 237, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .icon-linkedin:hover {
   background: #1b86bc;
 }
