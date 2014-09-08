@@ -2,18 +2,20 @@ $(document).ready(function() {
 	// grab an element
 	var myElement = document.querySelector('header');
 	var someElement = document.querySelector('.container');
+	var scrollUpButton = document.querySelector('.scroll-up-button');
 
 	function init() {
 		window.addEventListener('scroll', function (e) {
 			var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-			var shrinkOn = 200;
+			var shrinkOn = 50;
 			if (distanceY > shrinkOn) {
-				classie.add(myElement,"smaller");
+				classie.remove(scrollUpButton,'hidden');
+				classie.add(scrollUpButton,"smaller");
 				console.log("i got smaller");
 			} else {
-				if (classie.has(myElement,"smaller")) {
-						classie.remove(myElement,"smaller");
-						console.log("i got bigger");
+				if (classie.has(scrollUpButton,"smaller")) {
+					classie.remove(scrollUpButton,"smaller");
+					console.log("i got bigger");
 				}
 			}
 		});
