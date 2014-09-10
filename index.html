@@ -13,13 +13,138 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif|Raleway">
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/sliding_effect.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/headroom.js"></script>
+		<script type="text/javascript" src="js/tooltip.js"></script>
+		<script type="text/javascript" src="js/classie.js"></script>		
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
-
 	<body>
-		<section class="content">
-			<h1 class="about">THIS PAGE IS UNDER CONSTRUCTION</h1>
-			<h3>Come back soon!</h3>
-	 	</section>
+		<div class="container">
+			<header>
+				<div class="scroll-up-button" id="scroll-up-button">
+					<a href="mailto:fai.weiner@gmail.com">
+						Drop me a line!
+					</a>
+				</div>
+			</header>
+			<div class="space-row">
+				<h1>Fai Weiner</h1>
+				<p>Full-Stack Web Developer</p>
+			</div>
+			<div class="content-row">
+				<h1>Projects</h1>
+				<p>Here's what I've been up to at GA's WDI-5.</p>
+				<p>Click the <i class="icon-arrow-down"></i> icon to find out more about each project.</p>
+				<ul class="projects">
+					<li class="thumbnail-shuffla icon-arrow-down"><img src="images/shuffla/shuffla-mobile.jpg" alt="Shuffla" class="project-thumbnail" id="shuffla-thumbnail">
+						<a href="http://shufflamasterbd9c.ninefold-apps.com/">Shuffla</a>
+					</li>
+					<li class="thumbnail-bero icon-arrow-down"><img src="images/bero/bero-mobile.jpg" alt="Bero" class="project-thumbnail" id="bero-thumbnail">
+						<a href="http://bero.herokuapp.com">Bero</a>
+					</li>
+					<li class="thumbnail-trl icon-arrow-down"><img src="images/trl/realityleaguelanding.jpg" alt="The Reality League" class="project-thumbnail" id="realityleague-thumbnail">
+						<a href="http://therealityleague.herokuapp.com/">The Reality League</a>
+					</li>
+				</ul>
+			</div>
+			<!-- BOX FOR DESCRIPTION -->
+			<div id="project-info" class="hidden">
+			</div>
+			<!-- Shuffla -->
+			<div class="project-expand hidden" id="shuffla-expand">
+				<div class="project-img" id="shuffla-expand-img">
+					<img src="images/shuffla/shuffla-game-demo.jpg" alt="Shuffla demo" class="demo-img">
+				</div>
+				<div class="project-description" id="shuffla-expand-description">
+					<h2>Shuffla</h2>
+					<p>Gamifying your song knowledge, Shuffla lets users guess the name and artist of songs. Users can pick games based on artist or genre and compete against friends to guess the name of a song - the faster you guess, the more points you earn.</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>Spotify API</li> 
+						<li>RSpotify API</li>
+						<li>Facebook API</li>
+						<li>Instagram API</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+						<li>Sass</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Bero -->
+			<div class="project-expand hidden" id="bero-expand">
+				<div class="project-img" id="bero-expand-img">
+					<img src="images/bero/bero-compass.png" alt="bero demo" class="demo-img">
+				</div>
+				<div class="project-description" id="bero-expand-description">
+					<h2>Bero</h2>
+					<p>Bero helps users locate friends with real-time geolocation. It's like "Marco Polo" for the Digital Age.</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+						<li>GoogleMaps API</li>
+						<li>Geolocator API</li>
+						<li>Instagram API</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+					</ul>
+				</div>
+			</div>
+		
+			<!-- The Reality League -->
+			<div class="project-expand hidden" id="realityleague-expand">
+				<div class="project-img" id="realityleague-expand-img">
+					<img src="images/trl/realityleaguenav.jpg" alt="realityleague demo" class="demo-img">
+				</div>
+				<div class="project-description" id="realityleague-expand-description">
+					<h2>The Reality League</h2>
+					<p>Play "fantasy" games with your favorite reality TV shows. Pick your "dream team" from the pool of contestants on a show and watch as they earn points for you over the course of the season.</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>Javascript</li>
+						<li>jQuery</li>
+						<li>AJAX</li>
+						<li>Handlebar</li>
+						<li>Underscore</li>
+						<li>X-Editable API</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+						<li>Sass</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- -->
+			<div data-panel="about">
+				<h1>About Me</h1>
+				<p>Who am I?</p>
+				<img src="images/HEADSHOT_Fai.jpg" alt="" class="avatar">
+				<div class="about-me-content">
+					<p>I'm an ex-PR pro turned full-stack Web developer <br>living in sunny Sydney, Australia.</p>
+					<p><span>Ruby on Rails</span> fanatic, <span>jQuery</span> enthusiast, <br><span>Bootstrap</span> guru and an entrepreneur at heart.</p>
+					<p>I'm always looking for new challenges and discovering new things to learn. I also love connecting with people who are passionate about their craft, so feel free to drop me a line.</p>
+				</div>
+			</div>
+			<!-- -->
+			<div class="contact-form">
+			</div>
+			<!-- -->
+			<footer id="footer">
+				<h1>Find Me on the Web</h1>
+				<p>You can contact or follow me via any of these services:</p>
+				<ul class="social">
+					<li class="icon-github"><a href="https://github.com/faiweiner">Github</a></li>
+					<li class="icon-linkedin"><a href="au.linkedin.com/in/faiweiner/">LinkedIn</a></li>
+					<li class="icon-tumblr"><a href="http://faiweiner.tumblr.com/">Tumblr</a></li>
+					<li class="icon-googleplus"><a href="https://plus.google.com/u/1/109219557915889722513/posts">Google+</a></li>
+					<li class="icon-stackoverflow"><a href="http://stackexchange.com/users/4956508/fai-weiner">Stack<br>Overflow</a></li>
+				</ul>
+			</footer>
+		</div>
 	</body>
 </html>

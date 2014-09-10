@@ -88,10 +88,6 @@ $(document).ready(function () {
 	        h: $w.height() 
 	    }
 	}
-	        
-	console.log(getViewport());
-	    
-	console.log(getViewport2());
 
 	var expandDescription = function (target) {
 		$('.project-info').removeClass('hidden');

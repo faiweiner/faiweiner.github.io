@@ -77,44 +77,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-/* --- Sectional styling --- */
-/* line 50, ../sass/style.scss */
-.container {
-  max-width: 960px;
-  margin: auto auto;
-  position: relative;
-  display: inline-block;
-}
-/* line 55, ../sass/style.scss */
-.container .content-row {
-  padding-bottom: 75px;
-}
-
-/* line 60, ../sass/style.scss */
-.space-row {
-  background-color: yellow;
-  width: 100%;
-  height: 10vh;
-}
-
-/* line 65, ../sass/style.scss */
-.content-column {
-  background-color: red;
-  max-width: 80%;
-}
-
-/* line 70, ../sass/style.scss */
-.about-me-content {
-  width: 70%;
-  margin: 0 auto;
-}
-
 /* --- Element styling --- */
-/* line 77, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 body {
   font-family: "Raleway", "Lucida Grande", Verdana, sans-serif;
   color: #3b3b3a;
-  background-color: white;
+  background-color: #3b6986;
   font-size: 100%;
   text-align: center;
   margin: 0;
@@ -122,101 +90,137 @@ body {
   position: relative;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 h1 {
   margin-top: 0.25em;
   font-size: 3.25em;
 }
 
-/* line 93, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 97, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 p {
   color: #3b3b3a;
   margin-top: .55em;
   font-size: 1em;
 }
-/* line 101, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 p > span {
   color: #8c1357;
 }
 
-/* line 106, ../sass/style.scss */
+/* --- Sectional styling --- */
+/* line 81, ../sass/style.scss */
+.container {
+  background-color: white;
+  max-width: 960px;
+  margin: auto auto;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 89, ../sass/style.scss */
+.space-row {
+  margin: 20px auto 40px auto;
+  width: 100%;
+}
+
+/* line 93, ../sass/style.scss */
+.content-column {
+  background-color: red;
+  max-width: 80%;
+}
+
+/* line 98, ../sass/style.scss */
+.about-me-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 103, ../sass/style.scss */
 .project-thumbnail {
   max-height: 200px;
   max-width: 200px;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .logo {
   text-align: center;
   background-color: white;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
+.scroll-up-button {
+  margin-left: 10px;
+  border-bottom: solid #304d6b 1px;
+  border-left: solid #304d6b 1px;
+  border-right: solid #304d6b 1px;
+  border-bottom-left-radius: 10px;
+}
+
+/* line 120, ../sass/style.scss */
 .scroll-up-button, nav {
   background-color: white;
   padding: 10px;
 }
-/* line 117, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .scroll-up-button > a, nav > a {
   text-decoration: none;
   text-align: right;
-}
-
-/* line 125, ../sass/style.scss */
-.avatar {
-  max-height: 100px;
-  border: solid #3b3b3a 1px;
+  color: #3b3b3a;
 }
 
 /* line 130, ../sass/style.scss */
+.avatar {
+  height: 200px;
+}
+
+/* line 134, ../sass/style.scss */
 #project-info {
   width: 100%;
+  height: 375px;
 }
-/* line 132, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 #project-info .project-expand {
   margin: auto auto;
   padding: 10px;
-  border: 1px solid #304d6b;
   width: 75%;
-  height: 100%;
   display: inline-block;
 }
-/* line 139, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 #project-info .project-expand .project-img {
   float: left;
   margin: 20px 20px;
   max-width: 30%;
 }
-/* line 143, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 #project-info .project-expand .project-img .demo-img {
   border: 1px solid #304d6b;
   width: 100%;
 }
-/* line 148, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 #project-info .project-expand .project-description {
   max-width: 80%;
   margin-left: 10px;
   overflow-y: auto;
 }
-/* line 152, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #project-info .project-expand .project-description > h2 {
   padding-top: 10px;
 }
-/* line 155, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 #project-info .project-expand .project-description > p {
-  padding: 5px;
+  padding: 10px;
 }
-/* line 158, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #project-info .project-expand .project-description > ul {
   height: auto;
   padding-bottom: 10px;
 }
-/* line 161, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 #project-info .project-expand .project-description > ul > li {
   position: relative;
   display: inline-block;
@@ -235,35 +239,34 @@ p > span {
 }
 
 /* --- headroom styling --- */
-/* line 179, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .headroom {
   position: fixed;
   transition: transform 400ms linear;
 }
 
-/* line 183, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .headroom--pinned {
   transform: translateY(0%);
 }
 
-/* line 186, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .headroom--unpinned {
   transform: translateY(-100%);
 }
 
 /* --- Overrider --- */
-/* line 194, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 footer {
   padding: 2em;
 }
 
-/* line 198, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .projects {
   margin: 2em 0 4em;
-  height: 30vh;
   font-family: "Raleway", "Lucida Grande", Verdana, sans-serif;
 }
-/* line 203, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .projects li {
   position: relative;
   display: inline-block;
@@ -277,7 +280,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 210, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .projects li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -285,7 +288,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 215, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 .projects li:before {
   position: absolute;
   width: 2em;
@@ -294,7 +297,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 223, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .projects li a {
   text-decoration: none;
   display: block;
@@ -306,7 +309,7 @@ footer {
 }
 
 /* --- Shared Styles --- */
-/* line 238, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .icon-location:before,
 .icon-bubble:before,
 .icon-spinner:before,
@@ -332,88 +335,88 @@ footer {
 }
 
 /* --- Individual Styles --- */
-/* line 264, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .icon-location:before {
   content: "\e600";
 }
 
-/* line 267, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .icon-bubble:before {
   content: "\e601";
 }
 
-/* line 270, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .icon-spinner:before {
   content: "\e602";
 }
 
-/* line 273, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .icon-attachment:before {
   content: "\e603";
 }
 
-/* line 276, ../sass/style.scss */
+/* line 279, ../sass/style.scss */
 .icon-arrow-up:before {
   content: "\e604";
 }
 
-/* line 279, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .icon-arrow-right:before {
   content: "\e605";
 }
 
-/* line 282, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .icon-arrow-down:before {
   content: "\e606";
 }
 
-/* line 285, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 .icon-arrow-left:before {
   content: "\e607";
 }
 
-/* line 288, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .icon-googleplus:before {
   content: "\e608";
 }
 
-/* line 291, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .icon-facebook:before {
   content: "\e609";
 }
 
-/* line 294, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .icon-github:before {
   content: "\e60a";
 }
 
-/* line 297, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .icon-tumblr:before {
   content: "\e60b";
 }
 
-/* line 300, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .icon-linkedin:before {
   content: "\e60c";
 }
 
-/* line 303, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .icon-stackoverflow:before {
   content: "\e60d";
 }
 
-/* line 306, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .icon-file-pdf:before {
   content: "\e60e";
 }
 
-/* line 311, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .social {
   margin: 2em 0;
   height: 110px;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 316, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .social li {
   position: relative;
   display: inline-block;
@@ -427,7 +430,7 @@ footer {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 323, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .social li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -435,7 +438,7 @@ footer {
   transform: scale(1.25, 1.25);
   color: white;
 }
-/* line 328, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .social li:before {
   position: absolute;
   width: 2em;
@@ -444,7 +447,7 @@ footer {
   top: 1.5em;
   left: 50%;
 }
-/* line 336, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .social li a {
   text-decoration: none;
   display: block;
@@ -457,7 +460,7 @@ footer {
   text-overflow: ellipsis;
 }
 
-/* line 351, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 .thumbnail-shuffla,
 .thumbnail-bero,
 .thumbnail-trl {
@@ -466,7 +469,7 @@ footer {
   border: 1px solid #304d6b;
 }
 
-/* line 359, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .thumbnail-shuffla:hover,
 .thumbnail-bero:hover,
 .thumbnail-trl:hover {
@@ -474,78 +477,78 @@ footer {
 }
 
 /* Tumblr */
-/* line 364, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .icon-tumblr {
   color: #304d6b;
 }
 
-/* line 365, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .icon-tumblr:hover {
   background: #304d6b;
 }
 
 /* Instagram */
-/* line 367, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 368, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 370, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 371, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* Google-Plus */
-/* line 373, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 .icon-googleplus {
   color: #da4937;
 }
 
-/* line 374, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .icon-googleplus:hover {
   background: #da4937;
 }
 
 /* Github */
-/* line 376, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 .icon-github {
   color: #B3ADA7;
 }
 
-/* line 377, ../sass/style.scss */
+/* line 380, ../sass/style.scss */
 .icon-github:hover {
   background: #333333;
 }
 
 /* Stackoverflow */
-/* line 379, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .icon-stackoverflow {
   color: #ff771b;
 }
 
-/* line 380, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .icon-stackoverflow:hover {
   background: #ff771b;
 }
 
 /* LinkedIn */
-/* line 382, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .icon-linkedin {
   color: #1b86bc;
 }
 
-/* line 383, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .icon-linkedin:hover {
   background: #1b86bc;
 }
