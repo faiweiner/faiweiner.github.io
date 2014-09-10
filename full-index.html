@@ -33,55 +33,89 @@
 				<h1>Projects</h1>
 				<p>Here's what I've been up to at GA's WDI-5.</p>
 				<ul class="projects">
-					<li class="thumbnail-shuffla icon-arrow-down"><img src="images/shuffla/shuffla-mobile.jpg" alt="Shuffla" class="project-thumbnail">
-						<a href="#">Shuffla</a>
-						<div class="hidden">
-							<p>Gamifying your song knowledge, Shuffla lets users guess the name and artist of songs. Users can pick games based on artist or genre, and can compete against friends.</p>
-							<ul class="tags">
-								<li>Ruby on Rails</li>
-								<li>PostgreSQL</li>
-								<li>Spotify & RSpotify API</li>
-								<li>Facebook & Instagram API</li>
-								<li>SASS</li>
-								<li>Bootstrap</li>
-								<li>Haml</li>
-							</ul>
-						</div>
+					<li class="thumbnail-shuffla icon-arrow-down"><img src="images/shuffla/shuffla-mobile.jpg" alt="Shuffla" class="project-thumbnail" id="shuffla-thumbnail">
+						<a href="http://shufflamasterbd9c.ninefold-apps.com/">Shuffla</a>
 					</li>
-					<li class="thumbnail-bero icon-arrow-down"><img src="images/bero/bero-mobile.jpg" alt="bero-thumbnail" class="project-thumbnail"><a href="#">Bero</a>
-						<div class="hidden">
-							<p>Bero helps users locate friends with real-time geolocation. It's like "Marco Polo" for the Digital Age.</p>
-							<ul class="tags">
-								<li>Ruby on Rails</li>
-								<li>PostgreSQL</li>
-								<li>JavaScript & jQuery</li>
-								<li>GoogleMaps API</li>
-								<li>Geolocator API</li>
-								<li>Instagram API</li>
-								<li>Bootstrap</li>
-								<li>Haml</li>
-							</ul>
-						</div>
+					<li class="thumbnail-bero icon-arrow-down"><img src="images/bero/bero-mobile.jpg" alt="Bero" class="project-thumbnail" id="bero-thumbnail">
+						<a href="http://bero.herokuapp.com">Bero</a>
 					</li>
-					<li class="thumbnail-trl icon-arrow-down"><img src="images/trl/trl-landing.jpg" alt="" class="project-thumbnail">
-						<a href="http://faiweiner.tumblr.com/">The Reality League</a>
-						<div class="hidden">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor tenetur fugiat cumque labore eligendi quisquam, aliquid! Nobis error, quidem atque et tenetur iure similique dolore veritatis aliquam facere labore.</p>
-							<ul class="tags">
-								<li>Ruby on Rails</li>
-								<li>PostgreSQL</li>
-								<li>Javascript</li>
-								<li>jQuery</li>
-								<li>AJAX</li>
-								<li>Backbone.js</li>
-								<li>Handlebar</li>
-								<li>Underscore</li>
-								<li>Bootstrap</li>
-							</ul>
-						</div>
+					<li class="thumbnail-trl icon-arrow-down"><img src="images/trl/realityleaguelanding.jpg" alt="The Reality League" class="project-thumbnail" id="realityleague-thumbnail">
+						<a href="http://therealityleague.herokuapp.com/">The Reality League</a>
 					</li>
 				</ul>
 			</div>
+			<!-- BOX FOR DESCRIPTION -->
+			<div id="project-info" class="hidden">
+			</div>
+			<!-- Shuffla -->
+			<div class="project-expand hidden" id="shuffla-expand">
+				<div class="project-img" id="shuffla-expand-img">
+					<img src="images/shuffla/shuffla-game-demo.jpg" alt="Shuffla demo" class="demo-img">
+				</div>
+				<div class="project-description" id="shuffla-expand-description">
+					<h2>Shuffla</h2>
+					<p>Gamifying your song knowledge, Shuffla lets users guess the name and artist of songs. Users can pick games based on artist or genre and compete against friends to guess the name of a song - the faster you guess, the more points you earn.</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>Spotify API</li> 
+						<li>RSpotify API</li>
+						<li>Facebook API</li>
+						<li>Instagram API</li>
+						<li>SASS</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Bero -->
+			<div class="project-expand hidden" id="bero-expand">
+				<div class="project-img" id="bero-expand-img">
+					<img src="images/bero/bero-compass.png" alt="bero demo" class="demo-img">
+				</div>
+				<div class="project-description" id="bero-expand-description">
+					<h2>Bero</h2>
+					<p>Bero helps users locate friends with real-time geolocation. It's like "Marco Polo" for the Digital Age.</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+						<li>GoogleMaps API</li>
+						<li>Geolocator API</li>
+						<li>Instagram API</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+					</ul>
+				</div>
+			</div>
+		
+			<!-- The Reality League -->
+			<div class="project-expand hidden" id="realityleague-expand">
+				<div class="project-img" id="realityleague-expand-img">
+					<img src="images/trl/realityleaguenav.jpg" alt="realityleague demo" class="demo-img">
+				</div>
+				<div class="project-description" id="realityleague-expand-description">
+					<h2>The Reality League</h2>
+					<p>Play "fantasy" games with your favorite reality TV shows. Pick your "dream team" from the pool of contestants on a show and watch as they earn points for you over the course of the season. Whether you join a public or a private league, the goal is always the same: earn as many points as possible to win!</p>
+					<ul class="tags">
+						<li>Ruby on Rails</li>
+						<li>PostgreSQL</li>
+						<li>Javascript</li>
+						<li>jQuery</li>
+						<li>AJAX</li>
+						<li>Handlebar</li>
+						<li>Underscore</li>
+						<li>X-Editable API</li>
+						<li>Bootstrap</li>
+						<li>Haml</li>
+						<li>Sass</li>
+					</ul>
+				</div>
+			</div>
+
+
 			<!-- -->
 			<div data-panel="about">
 				<h1>About Me</h1>

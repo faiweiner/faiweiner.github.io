@@ -13,6 +13,7 @@
 	$secondaryFontFamily: 'Droid Serif', serif;
 	$socialFontFamily: Helvetica, Arial, sans-serif;
 	$primaryFontColor: #3B3B3A;
+	$primaryColor: #304d6b;
 	$primaryhighlight: #8C1357;
 
 // ========== Font Face ========== //
@@ -51,6 +52,9 @@
 	margin: auto auto;
 	position: relative;
 	display: inline-block;
+	.content-row {
+		padding-bottom: 75px;
+	}
 }
 
 .space-row {
@@ -123,6 +127,53 @@ p {
 	border: solid $primaryFontColor 1px;
 }
 
+#project-info {
+	width: 100%;
+	.project-expand {
+		margin: auto auto;
+		padding: 10px;
+		border: 1px solid $primaryColor;
+		width: 75%;
+		height: 100%;
+		display: inline-block;
+		.project-img {
+			float: left;
+			margin: 20px 20px;
+			max-width: 30%;
+			.demo-img {
+				border: 1px solid $primaryColor;
+				width: 100%;
+			}
+		}
+		.project-description {
+			max-width: 80%;
+			margin-left: 10px;
+			overflow-y: auto;
+			> h2 {
+				padding-top: 10px;
+			}
+			> p {
+				padding: 5px;
+			}
+			> ul {
+				height: auto;
+				padding-bottom: 10px;
+				> li {
+					position: relative;
+					@include inline-block();
+					margin: 3px;
+					text-align: middle;
+					padding: 5px;
+					display: inline-block;
+					color: white;
+					background: $primaryColor;
+					width: 150px;
+					max-height: 3em;
+				}
+			}
+		}
+	}
+}
 /* --- headroom styling --- */
 
 .headroom {
@@ -333,19 +384,9 @@ footer {
 
 
 @media screen and (max-width: 400px){
-	.content-row {
-		.projects > li {
-			img {
-				height: 100px;
-			}
-		}
-	}
+
 }
 
 @media screen and (max-width: 700px){
-	.content-row{
-		font-size: 120%;
-		height: 75vh;
-		margin-bottom: 1em;
-	}
+	
 }

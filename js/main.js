@@ -1,4 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
+	// namesake key elements
+
+	$projectInfo = $('#project-info');
+	$shufflaExpandBox = $('#shuffla-expand');
+	$beroExpandbox = $('#bero-expand')
+	$realityLeagueExpandBox = $('#realityleague-expand');
+
 	// grab an element
 	var myElement = document.querySelector('header');
 	var someElement = document.querySelector('.container');
@@ -52,14 +59,14 @@ $(document).ready(function() {
 		// element to listen to scroll events on, defaults to `window`
 		scroller : someElement,
 		// callback when pinned, `this` is headroom object
-		onPin : function() {
+		onPin : function () {
 		},
 		// callback when unpinned, `this` is headroom object
-		onUnpin : function() {},
+		onUnpin : function () {},
 		// callback when above offset, `this` is headroom object
-		onTop : function() {},
+		onTop : function () {},
 		// callback when below offset, `this` is headroom object
-		onNotTop : function() {},
+		onNotTop : function () {},
 	});
 	getViewport = function () {
 	  var m = document.compatMode == 'CSS1Compat';
@@ -72,7 +79,7 @@ $(document).ready(function() {
 	};
 
 
-	getViewport2 = function() {
+	getViewport2 = function () {
 	    var $w = $(window);
 	    return {
 	        l: $w.scrollLeft(),
@@ -85,6 +92,34 @@ $(document).ready(function() {
 	console.log(getViewport());
 	    
 	console.log(getViewport2());
+
+	var expandDescription = function (target) {
+		$('.project-info').removeClass('hidden');
+		$('.project-expand').removeClass('hidden');
+		$element = target;
+		console.log($element);
+	};
+
+	$('.project-thumbnail').on('click', function (e) {
+		$projectInfo.removeClass('hidden');
+		var thumbnailId = event.target.id;
+
+		if (thumbnailId == 'shuffla-thumbnail') {
+			$projectInfo.empty();
+			$projectInfo.append($shufflaExpandBox);
+			$shufflaExpandBox.removeClass('hidden');
+		} else if (thumbnailId == 'bero-thumbnail') {
+			$projectInfo.empty();
+			$projectInfo.append($beroExpandbox);
+			$beroExpandbox.removeClass('hidden');
+			// $projectInfo.append($shufflaExpandBox);
+		} else if (thumbnailId == 'realityleague-thumbnail') {
+			$projectInfo.empty();
+			$projectInfo.append($realityLeagueExpandBox);
+			$realityLeagueExpandBox.removeClass('hidden');
+		};
+		console.log($shufflaExpandBox);
+	});
 });
 
 
